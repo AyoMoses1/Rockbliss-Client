@@ -1,0 +1,97 @@
+.remark-container{
+    margin: 50px 0 !important;
+    padding-top: 50px;
+    /* background: red ; */
+}
+img{
+    width: 100%;
+}
+.caption{
+    font-size: 50px;
+}
+.flex{
+    display: flex;
+}
+.manager{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.name{
+    font-weight: 700;
+    font-size: 20px;
+}
+.role, .title{
+    color: #a1a1a1;
+}
+.text-muted{
+    color: #a1a1a1;
+}
+.sign{
+    width: 200px;
+}
+
+.container > .MuiGrid-item:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.remark-img-container{
+    position: relative;
+}
+
+.remark-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  } 
+  .remark-container{
+    text-align: center;
+  }
+  .caption{
+    font-size: 30px;
+  }
+  .title{
+    font-size: 12px;
+  }
+  .container > .MuiGrid-item:nth-child(3){
+    margin-top: 20px;
+  }
+  .remark-container{
+    padding-top: 0;
+  }
+  .MuiGrid-spacing-xs-2 > .MuiGrid-item{
+    width: 100%;
+  }
+}

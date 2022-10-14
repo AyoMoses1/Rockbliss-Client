@@ -1,0 +1,35 @@
+.gallery-container{
+    margin: 100px 0 !important;
+}
+.gallery-container img{
+    /* width: 100% !important; */
+    height: 100%;
+    /* object-fit: contain; */
+}
+.city-view{
+    background: black;
+    color: #fff;
+    padding: 80px 50px !important;
+}
+
+.sea-view{
+    background: orange;
+    color: #fff;
+    padding: 80px 50px !important;
+    width: 80%;
+    box-sizing: border-box !important;
+}
+
+.title{
+    color: white;
+    font-size: 14px;
+}
+.caption{
+    font-size: 36px;
+}
+p{
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 16px;
+}

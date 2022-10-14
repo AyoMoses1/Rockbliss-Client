@@ -1,0 +1,108 @@
+.duration-container{
+    margin: 100px 0;
+}
+
+.duration-flex{
+    display: flex !important;
+    justify-content: space-between;
+}
+.duration-caption h3{
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+.duration-card{
+    text-align: center;
+    padding: 20px 0 !important;
+}
+.duration-icon{
+    font-size: 36px;
+    color: orange;  
+}
+.duration-card:nth-child(1), .duration-card:nth-child(4){
+    background: orange;
+    color: white;
+}
+.duration-card:nth-child(2) .icon-container, .duration-card:nth-child(3) .icon-container{
+    background: orange;
+    color: white !important;
+}
+.duration-card:nth-child(2) .duration-icon, .duration-card:nth-child(3) .duration-icon{
+    background: orange;
+    color: white !important;
+}
+.duration-card:nth-child(2), .duration-card:nth-child(3){
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.duration-card:nth-child(1) p, .duration-card:nth-child(4) p{
+    color: #FFF;
+}
+
+.icon-container{
+    padding: 10px 15px;
+    border: 1px solid #ecebeb;
+    display: inline-block;
+    background: #fff;
+    border-radius: 10px 0 10px 0;
+}
+.about-content{
+    color: #858A99;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.duration-content h2{
+    color: #1D1D1D;
+    font-family: "Gilda Display";
+    font-size: 42px;
+    font-weight: normal;
+}
+
+.flex-1, .flex-2{
+    width: 48%;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .duration-container{
+        padding: 10px 20px;
+        margin: 0;
+    }
+    .duration-card{
+       margin-bottom: 20px !important;
+    }
+    .duration-content h2{
+        font-size: 27px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .duration-flex{
+        flex-direction: column;
+    }
+    .flex-1, .flex-2{
+        width: 100%;
+    }
+  }
+  
+
+  @media only screen and (min-width: 600px) {
+  
+  }
+  
+  @media only screen and (min-width: 768px) {
+  
+  }
+  
+
+  @media only screen and (min-width: 992px) {
+  
+  }
+  
+  @media only screen and (min-width: 1200px) {
+  
+  }

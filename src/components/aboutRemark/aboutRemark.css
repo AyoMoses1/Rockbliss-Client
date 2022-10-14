@@ -1,0 +1,119 @@
+.about-remark-container{
+  margin: 50px 0 !important;
+}
+img{
+    width: 100%;
+}
+.caption{
+    font-size: 50px;
+}
+.flex{
+    display: flex;
+}
+.manager{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.name{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.about-remark-container .role, .about-remark-container .title{
+    color: #a1a1a1;
+}
+.text-muted{
+    color: #a1a1a1;
+}
+.sign{
+    width: 200px;
+}
+
+.container > .MuiGrid-item:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-remark-img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-remark-img-container img{
+  object-fit: contain;
+  border: 10px solid black;
+  margin: auto 0;
+
+}
+
+.about-remark-box{
+    position: absolute;
+    top: 33%;
+    right: -100px;
+    object-position: center ;
+}
+
+.about-remark-caption{
+  padding-left: 50px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+
+@media only screen and (max-width: 600px) {
+  .flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  } 
+  .remark-container{
+    text-align: center;
+  }
+  .caption{
+    font-size: 30px;
+  }
+  .title{
+    font-size: 12px;
+  }
+  .container > .MuiGrid-item:nth-child(3){
+    margin-top: 20px;
+  }
+  .remark-container{
+    padding-top: 0;
+  }
+  .MuiGrid-spacing-xs-2 > .MuiGrid-item{
+    width: 100%;
+  }
+  .about-remark-caption{
+    padding: 0 !important;
+  }
+  .about-remark-box{
+    top: -20px;
+    left: 60px;
+    height: 50px !important;
+
+  }
+}

@@ -1,15 +1,20 @@
 .header {
-  background-color: #003580;
+  background: linear-gradient(1deg, rgba(0, 0, 0, 0.1), rgba(1, 1, 1, 0.6)), url('../../assets/home.webp');
+  background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   justify-content: center;
   position: relative;
+  padding: 100px 0;
+  z-index: 1;
 }
 
 .headerContainer {
   width: 100%;
   max-width: 1024px;
   margin: 20px 0px 100px 0px;
+  text-align: center;
 }
 
 .headerContainer.listMode {
@@ -39,27 +44,29 @@
 }
 
 .headerBtn {
-  background-color: #0071c2;
-  color: white;
+  background-color: black;
+  color: goldenrod;
   font-weight: 500;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
 .headerSearch {
-  height: 30px;
   background-color: white;
-  border: 3px solid #febb02;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 10px 0px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   position: absolute;
-  bottom: -25px;
+  bottom: -50px;
   width: 100%;
   max-width: 1024px;
+  height: 100px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 12 !important;
 }
 
 .headerIcon {
@@ -70,6 +77,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  border: 1px solid #dedede;
+  padding: 10px 20px;
+}
+.destination{
+  display: none;
+}
+.headerSearch .headerSearchItem:last-child{
+  border: none;
+}
+.rdrCalendarWrapper, .options{
+  margin-top: 20px;
 }
 
 .headerSearchInput {
@@ -125,4 +143,56 @@
 
 .optionCounterButton:disabled {
   cursor: not-allowed;
+}
+
+
+.MuiAppBar-colorPrimary{
+  color: #fff !important;
+  background-color: rgba(33, 31, 31, 0.4) !important;
+}
+
+
+
+
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .headerSearch{
+    flex-direction: column;
+    height: 40vh;
+    
+  
+    justify-content: space-between;
+  }
+  .headerSearchItem{
+    width: 80%;
+  }
+  .headerSearchItem:last-child{
+    padding: 0;
+  }
+  .headerSearch button{
+    width: 100%;
+    padding: 10px 40px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

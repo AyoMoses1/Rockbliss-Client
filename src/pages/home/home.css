@@ -1,12 +1,91 @@
 .homeContainer{
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  margin-top: 100px;
+  width: 100%;
+  padding: 0 50px;
 }
 
 .homeTitle{
-  width: 1024px;
+  max-width: 1024px;
   font-size: 20px;
+}
+.homeCards{
+  margin: 100px 0;
+  padding: 0 50px;
+}
+.homeCards .flex{
+  justify-content: space-between;
+}
+.gridCard{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+  position: relative;
+  padding: 50px !important;
+  padding-left: 100px !important;
+  width: 45%;
+}
+
+.gridCard h3{
+  font-weight: bold;
+}
+
+.gridCard img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: -40px;
+  top: 40px;
+}
+
+.gridCard p{
+  color: #5C5C5C;
+}
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .homeTitle{
+   text-align: center;
+  }
+  .homeContainer{
+    padding: 0 20px;
+  }
+  .homeCards{
+    padding: 0px;
+  }
+  .homeCards .flex{
+    flex-direction: column;
+    align-items: space-between;
+  }
+  .gridCard {
+    width: 100%;
+    padding: 20px 20px !important;
+    margin-bottom: 20px;
+  }
+  .gridCard img{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

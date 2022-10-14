@@ -12,6 +12,9 @@
   display: flex;
   flex-direction: column;
 }
+.fpGrid{
+  position: relative;
+}
 
 .fpImg{
   width: 100%;
@@ -20,7 +23,7 @@
 }
 
 .fpName{
-  color: #333;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -30,6 +33,14 @@
 
 .fpPrice{
   font-weight: 500;
+  display: block;
+  top: 20px;
+  right: 10;
+  background: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  text-transform: capitalize;
 }
 
 .fpRating>button{
@@ -43,4 +54,29 @@
 
 .fpRating>span{
   font-size: 14px;
+}
+.fpFlex{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  color: #fff;
+}
+
+.img-gradient{
+  display:inline-block;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.img-gradient img{
+  position:relative;
+  z-index:-1;
+  display:block;
 }

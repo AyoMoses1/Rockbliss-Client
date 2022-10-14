@@ -1,0 +1,61 @@
+.main-about-container{
+    padding: 50px 50px !important;
+}
+.about-content{
+    /* padding-left: 20px; */
+}
+
+.information{
+    margin: 100px 0;
+    color: #858A99;
+}
+.information ul{
+    padding-left: 20px;
+}
+
+.information ul li{
+    list-style-type: disc;
+}
+
+ul li::marker{
+    font-size: 20px;
+}
+.info-header{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .about-content{
+        padding-left: 0;
+    }
+    .main-about-container{
+        padding: 50px 20px !important;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+  
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  
+  }
+
+  

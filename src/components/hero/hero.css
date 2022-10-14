@@ -1,0 +1,17 @@
+.hero-container{
+    height: 50vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/pictures/gallery3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero-container h3{
+    font-size: 40px;
+}

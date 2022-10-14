@@ -1,7 +1,6 @@
-.listContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+.gridContainer {
+  margin-top: 50px !important;
+  padding: 0 50px !important;
 }
 
 .listWrapper {
@@ -12,10 +11,8 @@
 }
 
 .listSearch {
-  flex: 1;
-  background-color: #febb02;
+  border: 1px solid #ebebeb;
   padding: 10px;
-  border-radius: 10px;
   position: sticky;
   top: 10px;
   height: max-content;
@@ -34,6 +31,12 @@
   margin-bottom: 10px;
 }
 
+.lsItem input{
+  border: 1px solid #ebebeb !important;
+}
+.date-input{
+  border: 1px solid #ebebeb !important;
+}
 .lsItem>label{
   font-size: 12px;
 }
@@ -70,7 +73,7 @@
 
 .listSearch>button{
   padding: 10px;
-  background-color: #0071c2;
+  background-color: orange;
   color: white;
   border: none;
   width: 100%;
@@ -80,4 +83,30 @@
 
 .listResult {
   flex: 3;
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .gridContainer{
+    padding: 0 20px !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

@@ -1,16 +1,17 @@
 .searchItem {
-  border: 1px solid lightgray;
-  padding: 10px;
+  border: 1px solid #f1f1f1;
+  /* padding: 10px; */
   border-radius: 5px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 20px;
 }
 
 .siImg {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -19,11 +20,13 @@
   flex-direction: column;
   gap: 10px;
   flex: 2;
+  padding-left: 20px;
 }
 
 .siTitle {
-  font-size: 20px;
-  color: #0071c2;
+  font-size: 30px;
+  color: #1c1c1c;
+  font-family: 'Gilda Display';
 }
 
 .siDistance {
@@ -40,8 +43,10 @@
 }
 
 .siSubtitle{
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 15px;
+  color: #858a99;
+  line-height: 27px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .siFeatures{
@@ -63,7 +68,8 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  justify-content: space-between;
+  padding: 0 20px 20px;
 }
 
 .siRating{
