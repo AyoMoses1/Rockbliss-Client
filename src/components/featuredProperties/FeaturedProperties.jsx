@@ -1,10 +1,11 @@
 import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 import { Grid } from '@material-ui/core';
+import { api } from './../../services/api';
 
 const FeaturedProperties = () => {
 
-  const { data, loading, error } = useFetch("http://localhost:8000/api/hotels?featured=true&limit=4");
+  const { data, loading, error } = useFetch(`${api}/api/hotels?featured=true&limit=4`);
   return (
     <Grid container spacing={2} >
       {loading ? (
@@ -25,10 +26,6 @@ const FeaturedProperties = () => {
               <span className="fpCity">{item.city}</span>
               </div>
               <span className="fpPrice">Starting from ${item.cheapestPrice}</span>
-              {/* {item.rating && <div className="fpRating">
-                <button>{item.rating}</button>
-                <span>Excellent</span>
-              </div>} */}
             </Grid>
           ))}
         </>

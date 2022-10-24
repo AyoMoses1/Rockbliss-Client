@@ -3,10 +3,10 @@ import './hero.css'
 
 
 
-function Hero() {
+function Hero({title}) {
   return (
     <div className='hero-container'>
-        <h3>Our Apartments</h3>
+        <h3>{title}</h3>
     </div>
   )
 }

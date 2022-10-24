@@ -1,0 +1,19 @@
+.service__container{
+   padding: 100px 0;
+}
+.service-card{
+   border: 1px dashed #dedede;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 50px 0;
+   flex-direction: column;
+}
+.service-name{
+   margin-top: 10px;
+   color: #a8a8a8;
+   font-size: 18px;
+}
+.service__container svg{
+   color: #a8a8a8;
+}

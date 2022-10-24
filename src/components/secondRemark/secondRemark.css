@@ -23,8 +23,9 @@ img{
     font-size: 20px;
 }
 .role, .title{
-    color: #a1a1a1;
+    color: #a1a1a1 !important;
 }
+
 .text-muted{
     color: #a1a1a1;
 }
@@ -94,6 +95,10 @@ img{
   .MuiGrid-spacing-xs-2 > .MuiGrid-item{
     width: 100%;
   }
+}
+
+.second-remark{
+    margin-top: auto;
 }
 .second-remark img{
     height: 100%;

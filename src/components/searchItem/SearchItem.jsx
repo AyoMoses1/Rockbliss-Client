@@ -14,7 +14,7 @@ const SearchItem = ({item}) => {
         {/* <span className="siDistance">{item.distance}m from center</span> */}
         {/* <span className="siTaxiOp">Free airport taxi</span> */}
         <span className="siSubtitle">
-          {item.desc}
+          {item.desc.slice(0, 100) + "..."}
         </span>
         <span className="siFeatures">
           Entire studio • 1 bathroom • 21m² 1 full bed

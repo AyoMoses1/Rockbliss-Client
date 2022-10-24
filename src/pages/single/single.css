@@ -1,0 +1,32 @@
+.single-container{
+    padding:  100px 50px;
+}
+.single-container .carousel{
+    height: 400px !important;
+    background: #fff;
+}
+
+.single-container .car-image{
+    height: 400px;
+}
+.single-container img{
+    height: 100%;
+    width: 100%;
+    /* object-fit: contain; */
+}
+
+.single-container .hotelWrapper{
+    padding: 100px 0;
+    display: flex !important;
+}
+
+.single-container .hotelWrapper h1{
+    font-weight: 700;
+    color: #606060; 
+}
+.con{
+    background: red !important;
+}
+.single-container .hotelDetailsPrice{
+    width: 100%;
+}

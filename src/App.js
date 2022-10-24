@@ -10,6 +10,8 @@ import Login from "./pages/login/Login";
 import './App.css'
 import AboutPage from "./pages/about/About";
 import Apartments from './pages/apartments/Apartments';
+import Single from './pages/single/Single';
+import Services from "./pages/services/Services";
 
 function App() {
   return (
@@ -18,9 +20,11 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/hotels" element={<List/>}/>
         <Route path="/hotels/:id" element={<Hotel/>}/>
+        <Route path="/hotel/:id" element={<Single/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/about" element = {<AboutPage/>}/>
         <Route path="/apartments" element = {<Apartments/>}/>
+        <Route path="/services" element = {<Services/>}/>
       </Routes>
     </BrowserRouter>
   );

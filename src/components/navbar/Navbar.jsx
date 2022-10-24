@@ -60,7 +60,7 @@ function Navbar() {
             <Link to="/apartments" className={""}>
               Our Apartments
             </Link>
-            <Link to="/" className={""}>
+            <Link to="/services" className={""}>
               Extra Services
             </Link>
             <Link to="/" className={""}>

@@ -42,7 +42,7 @@ function Apartment({item}) {
                         <Link
                             style={{textDecoration: 'none'}}
                             to={
-                                `/hotels/${item._id}`
+                                `/hotel/${item._id}`
                             }
                             className="ml-3 mr-4"
                             >

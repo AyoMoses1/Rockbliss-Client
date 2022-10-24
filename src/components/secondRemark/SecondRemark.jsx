@@ -16,7 +16,7 @@ const SecondRemark = () => {
 
 
   return (
-    <Grid container spacing={2} className="remark-container container">
+    <Grid container spacing={2} className="remark-container" alignItems='center'>
         <Grid item xs={12} md={6} className='remark-img-container second-remark'>
             <Grid container spacing={2}>
                 <Grid item md ={6}>
