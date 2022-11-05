@@ -61,7 +61,7 @@
 } */
 .nav-links{
   /* background: red; */
-  width: 80%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
 }
@@ -72,4 +72,7 @@
 }
 .menu-icon{
   color: #fff;
+}
+.drawer-link{
+  color: #000;
 }

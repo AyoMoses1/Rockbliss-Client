@@ -1,10 +1,13 @@
+.reserve-modal{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
 .reserve {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.418);
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +18,8 @@
     background-color: white;
     padding: 20px;
     position: relative;
+    height: 60vh;
+    overflow-y: auto;
   }
   
   .rClose {

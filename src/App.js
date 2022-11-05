@@ -12,6 +12,10 @@ import AboutPage from "./pages/about/About";
 import Apartments from './pages/apartments/Apartments';
 import Single from './pages/single/Single';
 import Services from "./pages/services/Services";
+import Terms from './pages/terms/Terms';
+import Lease from './pages/lease/Lease';
+import Review from './pages/review/Review';
+import Contact from './pages/contact/Contact';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
         <Route path="/about" element = {<AboutPage/>}/>
         <Route path="/apartments" element = {<Apartments/>}/>
         <Route path="/services" element = {<Services/>}/>
+        <Route path="/terms" element = {<Terms/>}/>
+        <Route path="/contact" element = {<Contact/>}/>
+        <Route path="/review" element = {<Review/>}/>
+        <Route path="/lease" element = {<Lease/>}/>
       </Routes>
     </BrowserRouter>
   );

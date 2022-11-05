@@ -60,42 +60,42 @@ const classes = useStyles();
         <List>
          <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/">Home</Link>
+              <Link to="/" className="drawer-link">Home</Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/about">About Us</Link>
+              <Link to="/about" className="drawer-link">About Us</Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/apartments">Our Apartments</Link>
+              <Link to="/apartments" className="drawer-link">Our Apartments</Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/services">Extra Services</Link>
+              <Link to="/services" className="drawer-link">Extra Services</Link>
             </ListItemText>
           </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)}>
+          {/* <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/about">Booking Terms</Link>
+              <Link to="/terms">Booking Terms</Link>
             </ListItemText>
-          </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)}>
+          </ListItem> */}
+          {/* <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/about">Lease Plan</Link>
+              <Link to="/lease">Lease Plan</Link>
             </ListItemText>
-          </ListItem>
-          <ListItem onClick={() => setOpenDrawer(false)}>
+          </ListItem> */}
+          {/* <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/about">Make A Review</Link>
+              <Link to="/review">Make A Review</Link>
             </ListItemText>
-          </ListItem>
+          </ListItem> */}
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" className="drawer-link">Contact</Link>
             </ListItemText>
           </ListItem>
         </List>

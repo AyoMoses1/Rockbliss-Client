@@ -22,12 +22,20 @@ import { SearchContext } from "../../context/SearchContext";
 import { AuthContext } from "../../context/authContext";
 import { Reserve } from "../../components/reserve/Reserve";
 import { api } from "../../services/api";
+import { makeStyles } from "@material-ui/core/styles";
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
 const Hotel = () => {
   const location = useLocation()
   const id = location.pathname.split('/')[2]
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
+  const handleOpenModal = () => setOpenModal(true);
+  const handleClose = () => setOpenModal(false);
   const [openModal, setOpenModal] = useState(false)
 
 
@@ -40,12 +48,12 @@ const Hotel = () => {
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
 
   function dayDifference(date1, date2) {
-    const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    const timeDiff = Math.abs(date2?.getTime() - date1?.getTime());
     const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
     return diffDays;
   }
 
-  const days = dayDifference(dates[0].endDate, dates[0].startDate);
+  const days = dayDifference(dates[0]?.endDate, dates[0]?.startDate);
   
   const navigate = useNavigate()
 
@@ -75,6 +83,18 @@ const Hotel = () => {
       navigate("/login")
     }
   }
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+ 
 
   return (
     <div>
@@ -139,10 +159,20 @@ const Hotel = () => {
           </div>
         </div>
         <MailList />
-        <Footer />
+        
       </div>)}
+      <Footer />
+      <Modal
+        open={openModal}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        className='reserve-modal'
+      >
+        <Reserve setOpen={setOpenModal} hotelId={id}/>
+      </Modal>
 
-      {openModal && <Reserve setOpen={setOpenModal} hotelId={id}/>}
+      {/* {openModal && } */}
     </div>
   );
 };

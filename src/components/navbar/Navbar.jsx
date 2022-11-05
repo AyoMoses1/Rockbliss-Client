@@ -63,15 +63,15 @@ function Navbar() {
             <Link to="/services" className={""}>
               Extra Services
             </Link>
-            <Link to="/" className={""}>
+            {/* <Link to="/terms" className={""}>
               Booking Terms
-            </Link>
-            <Link to="/" className={""}>
+            </Link> */}
+            {/* <Link to="/lease" className={""}>
               Lease Plan
-            </Link>
-            <Link to="/" className={""}>
+            </Link> */}
+            {/* <Link to="/review" className={""}>
               Make A Review
-            </Link>
+            </Link> */}
             <Link to="/contact" className={""}>
               Contact
             </Link>

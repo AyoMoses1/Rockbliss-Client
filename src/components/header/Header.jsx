@@ -40,8 +40,20 @@ const Header = ({ type, aboutPage }) => {
   const {dispatch} = useContext(SearchContext)
 
   const handleSearch = () => {
-    dispatch({type: "NEW_SEARCH", payload:{destination:"Ado Ekiti",dates, options}})
-    navigate("/hotels", { state: { destination: "Ado Ekiti", dates, options } });
+    if(openDate && dates){
+      if((dates[0].startDate !== dates[0].endDate) && (JSON.stringify(dates[0].startDate).split('T')[0] !== JSON.stringify(dates[0].endDate).split('T')[0])){
+        console.log(dates, "These are the dates")
+        dispatch({type: "NEW_SEARCH", payload:{destination:"Ado Ekiti",dates, options}})
+        navigate("/hotels", { state: { destination: "Ado Ekiti", dates, options } });
+      }
+      else{
+        alert("Please select an end date")
+      }
+    }
+    else{
+      setOpenDate(true)
+      alert("Please select an end Date")
+    }
   };
 
   return (

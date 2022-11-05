@@ -6,6 +6,7 @@ import { useState } from 'react'
 import useFetch from '../../hooks/useFetch'
 import { SearchContext } from "../../context/SearchContext"
 import { useNavigate } from "react-router-dom";
+import { api } from '../../services/api'
 
 
 import "./reserve.css"
@@ -16,7 +17,7 @@ import "./reserve.css"
 export const Reserve = ({setOpen, hotelId}) => {
 
   const [selectedRooms, setSelectedRooms] = useState([])
-  const {data, loading, error} = useFetch(`http://localhost:8000/api/hotels/room/${hotelId}`)
+  const {data, loading, error} = useFetch(`${api}/api/hotels/room/${hotelId}`)
   const { dates } = useContext(SearchContext);
 
   const navigate = useNavigate()
@@ -38,10 +39,10 @@ export const Reserve = ({setOpen, hotelId}) => {
   };
 
   
-  const alldates = getDatesInRange(dates[0].startDate, dates[0].endDate);
+  const alldates = getDatesInRange(dates[0]?.startDate, dates[0]?.endDate);
 
   const isAvailable = (roomNumber) => {
-    const isFound = roomNumber.unavailableDates.some((date) =>
+    const isFound = roomNumber?.unavailableDates.some((date) =>
       alldates.includes(new Date(date).getTime())
     );
 
