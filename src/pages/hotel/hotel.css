@@ -8,6 +8,8 @@
 .hotelWrapper {
   width: 100%;
   max-width: 1024px;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -148,4 +150,15 @@
   font-size: 50px;
   color: lightgray;
   cursor: pointer;
+}
+
+.checkout-section{
+  padding: 100px 100px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .checkout-section{
+    padding: 50px 20px;
+  }  
 }

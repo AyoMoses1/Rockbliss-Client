@@ -42,8 +42,9 @@ const Header = ({ type, aboutPage }) => {
   const handleSearch = () => {
     if(openDate && dates){
       if((dates[0].startDate !== dates[0].endDate) && (JSON.stringify(dates[0].startDate).split('T')[0] !== JSON.stringify(dates[0].endDate).split('T')[0])){
-        console.log(dates, "These are the dates")
+        // console.log(dates, "These are the dates")
         dispatch({type: "NEW_SEARCH", payload:{destination:"Ado Ekiti",dates, options}})
+        localStorage.setItem("state", JSON.stringify({destination:"Ado Ekiti",dates, options}))
         navigate("/hotels", { state: { destination: "Ado Ekiti", dates, options } });
       }
       else{
@@ -52,7 +53,7 @@ const Header = ({ type, aboutPage }) => {
     }
     else{
       setOpenDate(true)
-      alert("Please select an end Date")
+      alert("Please select a start and an end Date")
     }
   };
 

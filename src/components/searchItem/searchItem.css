@@ -105,11 +105,26 @@
 }
 
 .siCheckButton{
-  background-color: #0071c2;
+  background-color: orange;
   color: white;
   font-weight: bold;
-  padding: 10px 5px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+}
+.unavailable{
+  font-size: 11px;
+  font-weight: 600;
+  background: #fbe8e8;
+  color: #bd9b9b;
+  border-radius: 2px;
+  line-height: 24px;
+  border: none;
+}
+
+@media screen and (max-width: 600px)  {
+  .unavailable, .siCheckButton{
+    width: 100%;
+  }
 }

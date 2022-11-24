@@ -1,7 +1,7 @@
 import "./searchItem.css";
 import { Link } from "react-router-dom";
 
-const SearchItem = ({item}) => {
+const SearchItem = ({item, isAvailable}) => {
   return (
     <div className="searchItem">
       <img
@@ -36,7 +36,9 @@ const SearchItem = ({item}) => {
           <span className="siPrice">${item.cheapestPrice}</span>
           <span className="siTaxOp">Includes taxes and fees</span>
           <Link to={`/hotels/${item._id}`}>
-            <button className="siCheckButton">See availability</button>
+            {isAvailable(item) ? 
+              <button className="siCheckButton">Book Now</button> : <button className="unavailable" disabled>Those dates are not available</button>
+            } 
           </Link>
         </div>
       </div>

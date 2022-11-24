@@ -45,7 +45,6 @@ export const Reserve = ({setOpen, hotelId}) => {
     const isFound = roomNumber?.unavailableDates.some((date) =>
       alldates.includes(new Date(date).getTime())
     );
-
     return !isFound;
   };
 

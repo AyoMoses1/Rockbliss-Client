@@ -1,32 +1,21 @@
 import "./hotel.css";
 import Navbar from "../../components/navbar/Navbar";
-import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import CancelIcon from '@mui/icons-material/Cancel';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-  faCircleXmark,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import { AuthContext } from "../../context/authContext";
-import { Reserve } from "../../components/reserve/Reserve";
 import { api } from "../../services/api";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import  axios  from 'axios';
+import { Grid } from "@material-ui/core";
+import CheckoutForm from "../../components/form/Form";
 
 const Hotel = () => {
   const location = useLocation()
@@ -83,6 +72,35 @@ const Hotel = () => {
       navigate("/login")
     }
   }
+
+  const getDatesInRange = (startDate, endDate) => {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    const date = new Date(start.getTime());
+
+    const dates = [];
+
+    while (date <= end) {
+      dates.push(new Date(date).getTime());
+      date.setDate(date.getDate() + 1);
+    }
+
+    return dates;
+  };
+
+  const alldates = getDatesInRange(dates[0]?.startDate, dates[0]?.endDate);
+
+
+  const handleReserve = async (id) => {
+   
+    try {
+      // await axios.put(`http://localhost:8000/api/hotels/availability/${id}`, {
+      //   dates: alldates,
+      // })
+      navigate("/checkout");
+    } catch (err) {console.log(err)}
+  };
   const style = {
     position: 'absolute',
     top: '50%',
@@ -99,8 +117,34 @@ const Hotel = () => {
   return (
     <div>
       <Navbar />
-      <Header type="list" />
-      {loading ? "loading":
+      <div className="directions">
+          <div className="search">
+            <h4>Search</h4>
+            <p>Choose your favorite room</p>
+          </div>
+          <div className="search">
+            <h4>Booking</h4>
+            <p>Enter your booking details</p>
+          </div>
+          <div className="search">
+            <h4>Checkout</h4>
+            <p>Use your preferred payment method</p>
+          </div>
+          <div className="search">
+            <h4>Confirmation</h4>
+            <p>Receive a confirmation email</p>
+          </div>
+      </div>
+      <div className="checkout-section">
+        <Grid container spacing={2}>
+            <Grid item md={12}>
+              <div className="billing">
+                <CheckoutForm details={data}/>
+              </div>
+            </Grid>
+        </Grid>
+      </div>
+      {/* {loading ? "loading":
       (
       <div className="hotelContainer">
         {open && (
@@ -113,8 +157,9 @@ const Hotel = () => {
             <ArrowCircleRightIcon className="arrow" onClick={()=>handleMove("r")}/>
           </div>
         )}
+        <Grid container spacing={2}>
+        <Grid item md={12}>
         <div className="hotelWrapper">
-          <button className="bookNow">Reserve or Book Now!</button>
           <h1 className="hotelTitle">{data.name}</h1>
           <div className="hotelAddress">
             <LocationOnIcon/>
@@ -145,6 +190,10 @@ const Hotel = () => {
                 {data?.desc}
               </p>
             </div>
+          </div>
+        </div> 
+        </Grid>
+          <Grid item md ={12}>
             <div className="hotelDetailsPrice">
               <h1>Perfect for a {days}-night stay!</h1>
               <span>
@@ -154,25 +203,12 @@ const Hotel = () => {
               <h2>
                 <b>${days * data.cheapestPrice * options.room}</b> ({days} nights)
               </h2>
-              <button onClick={handleClick}>Reserve or Book Now!</button>
+              <button onClick={() => handleReserve(data._id)}>Reserve or Book Now!</button>
             </div>
-          </div>
-        </div>
-        <MailList />
-        
-      </div>)}
+          </Grid>
+        </Grid>
+      </div>)} */}
       <Footer />
-      <Modal
-        open={openModal}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        className='reserve-modal'
-      >
-        <Reserve setOpen={setOpenModal} hotelId={id}/>
-      </Modal>
-
-      {/* {openModal && } */}
     </div>
   );
 };

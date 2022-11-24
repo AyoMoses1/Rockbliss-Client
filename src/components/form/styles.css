@@ -1,0 +1,50 @@
+.form-header{
+   font-size: 18px;
+   margin-bottom: 20px;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 700;
+   color: #606060;
+}
+
+.error-text{
+   color: red;
+   font-size: 12px;
+}
+.checkout-header{
+   font-size: 18px;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 700;
+   color: #606060;
+}
+.card-flex{
+   display: flex;
+   justify-content: space-between;
+}
+
+.card-flex div{
+   color: #858a99;
+   font-size: 13px;
+   font-weight: 600;
+   line-height: 28px;
+}
+.checkout-btn{
+   margin-top: 20px !important;
+}
+.total-price{
+   background: #f5f4fb;
+   padding: 0 5px;
+}
+.total-price div{
+   font-size: 14px;
+   color: #606060;
+}
+.multiline{
+   width: 100%;
+}
+input, textarea{
+   padding: 10px 15px;
+   padding-top: 20px;
+   font-size: 15px;
+   color: #8e8e8e !important;
+   font-weight: 400 !important;
+}

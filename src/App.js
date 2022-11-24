@@ -16,6 +16,7 @@ import Terms from './pages/terms/Terms';
 import Lease from './pages/lease/Lease';
 import Review from './pages/review/Review';
 import Contact from './pages/contact/Contact';
+import Checkout from './pages/checkout/Checkout';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/contact" element = {<Contact/>}/>
         <Route path="/review" element = {<Review/>}/>
         <Route path="/lease" element = {<Lease/>}/>
+        <Route path="/checkout" element = {<Checkout/>}/>
       </Routes>
     </BrowserRouter>
   );

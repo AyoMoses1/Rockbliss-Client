@@ -85,11 +85,34 @@
   flex: 3;
 }
 
+.directions{
+  height: 20vh;
+  background: #f5f3f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.directions .search{
+  text-align: center;
+}
+.directions .search h4{
+    color: gray;
+    font-size: 15px;
+}
+.directions .search p{
+    color: #9a9a9a;
+    font-size: 14px;
+    line-height: 18px;
+}
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .gridContainer{
     padding: 0 20px !important;
+  }
+  .directions{
+    display: none;
   }
 }
 @media only screen and (min-width: 600px) {

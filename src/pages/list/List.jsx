@@ -1,6 +1,7 @@
 import "./list.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
+import { useContext } from 'react'
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { format } from "date-fns";
@@ -9,6 +10,8 @@ import SearchItem from "../../components/searchItem/SearchItem";
 import useFetch from "../../hooks/useFetch";
 import { Grid } from "@material-ui/core";
 import { api } from "../../services/api";
+import { SearchContext } from "../../context/SearchContext"
+
 
 const List = () => {
   const location = useLocation();
@@ -19,16 +22,64 @@ const List = () => {
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined)
 
+  const { searchedDates } = useContext(SearchContext);
+
   const {data, loading, error, reFetch} = useFetch(`${api}/api/hotels?city=${destination}&min=${min || 1}&max=${max || 100000}`) 
+
+  console.log(data, "This is the data ***************************************")
+
+  const getDatesInRange = (startDate, endDate) => {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    const date = new Date(start.getTime());
+
+    const dates = [];
+
+    while (date <= end) {
+      dates.push(new Date(date).getTime());
+      date.setDate(date.getDate() + 1);
+    }
+
+    return dates;
+  };
+  const alldates = getDatesInRange(dates[0]?.startDate, dates[0]?.endDate);
 
   const handleClick = () => {
     reFetch();
   }
+
+  const isAvailable = (hotel) => {
+    const isFound = hotel?.unavailableDates.some((date) =>
+      alldates.includes(new Date(date).getTime())
+    );
+        
+    return !isFound;
+  };
   
+
   return (
     <div>
       <Navbar />
-      <Header type="list" />
+      {/* <Header type="list" /> */}
+      <div className="directions">
+          <div className="search">
+            <h4>Search</h4>
+            <p>Choose your favorite room</p>
+          </div>
+          <div className="search">
+            <h4>Booking</h4>
+            <p>Enter your booking details</p>
+          </div>
+          <div className="search">
+            <h4>Checkout</h4>
+            <p>Use your preferred payment method</p>
+          </div>
+          <div className="search">
+            <h4>Confirmation</h4>
+            <p>Receive a confirmation email</p>
+          </div>
+      </div>
         <Grid container spacing={2} className='gridContainer'>
           <Grid item md={3} sm={12}>
             <div className="listSearch">
@@ -106,7 +157,7 @@ const List = () => {
                 <>
                   {data.map((item) => (
                     <Grid item md={6}>
-                       <SearchItem item={item} key={item._id} />
+                       <SearchItem item={item} key={item._id} isAvailable={isAvailable}/>
                     </Grid>
                   ))}
                 </>
