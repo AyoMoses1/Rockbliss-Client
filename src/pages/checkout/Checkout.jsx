@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AddressForm from '../../components/payments/AddressForm';
 import PaymentForm from './../../components/payments/PaymentForm';
 import Review from './../../components/payments/Review';
+import Navbar from '../../components/navbar/Navbar';
 
 function Copyright() {
   return (
@@ -47,7 +48,7 @@ function getStepContent(step) {
 const theme = createTheme();
 
 export default function Checkout() {
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(3);
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -60,7 +61,7 @@ export default function Checkout() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar
+      {/* <AppBar
         position="absolute"
         color="default"
         elevation={0}
@@ -71,10 +72,11 @@ export default function Checkout() {
       >
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Company name
+            Rockbliss Serviced Apartments
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
+      <Navbar/>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
         <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
           <Typography component="h1" variant="h4" align="center">
@@ -90,10 +92,10 @@ export default function Checkout() {
           {activeStep === steps.length ? (
             <React.Fragment>
               <Typography variant="h5" gutterBottom>
-                Thank you for your order.
+                Thank you for your booking.
               </Typography>
               <Typography variant="subtitle1">
-                Your order number is #2001539. We have emailed your order
+                Your booking id is #2001539. We have emailed your booking
                 confirmation, and will send you an update when your order has
                 shipped.
               </Typography>

@@ -10,6 +10,7 @@ import {
     faTaxi,
   } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DateRangeIdentifier from './DatePicker';
 
 
 
@@ -28,7 +29,7 @@ function HeaderSearch({
   return (
     <div>
         <div className="headerSearch">
-              <div className="headerSearchItem destination">
+              {/* <div className="headerSearchItem destination">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
                 <input
                   type="text"
@@ -36,8 +37,9 @@ function HeaderSearch({
                   className="headerSearchInput"
                   onChange={(e) => setDestination(e.target.value)}
                 />
-              </div>
-              <div className="headerSearchItem">
+              </div> */}
+               <DateRangeIdentifier dates={dates} setDates={setDates}/>
+              {/* <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                 <span
                   onClick={() => setOpenDate(!openDate)}
@@ -66,7 +68,7 @@ function HeaderSearch({
                     minDate={new Date()}
                   />
                 )}
-              </div>
+              </div> */}
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faPerson} className="headerIcon" />
                 <span
@@ -84,7 +86,7 @@ function HeaderSearch({
                           onClick={() => handleOption("adult", "d")}
                         >
                           -
-                        </button>
+                       </button>
                         <span className="optionCounterNumber">
                           {options.adult}
                         </span>
@@ -141,6 +143,7 @@ function HeaderSearch({
                   </div>
                 )}
               </div>
+             
               <div className="headerSearchItem">
                 <button className="headerBtn" onClick={handleSearch}>
                   CHECK AVAILABILITY

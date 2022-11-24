@@ -7,10 +7,11 @@ import Button from '@mui/material/Button';
 import "./styles.css";
 import { useNavigate } from 'react-router-dom';
 import CheckoutCard from './Card';
+import { PaystackButton } from 'react-paystack';
+
 
 function CheckoutForm({details}) {
 
-   console.log(details, "This is the real deal")
    const navigate = useNavigate()
 
    const initialValues = {
@@ -26,11 +27,51 @@ function CheckoutForm({details}) {
 
     };
 
+   const publicKey = "pk_test_0934f3caebadde29a20ee7a79f4b4f7b76703e7b"
    
-   const onSubmit = (values, actions) => {
+   const [counter, setCounter] = React.useState(null)
+   const [paymentDetails, setPaymentDetails] = React.useState({
+      email : '',
+      amount : undefined,
+      name: '',
+      phone: ''
+    })
+
+
+   const {email, amount, name, phone} = paymentDetails
+   const componentProps = {
+      email,
+      amount: amount * counter * 100,
+      metadata: {
+        name,
+        phone,
+      },
+      publicKey,
+      text: "PROCEED TO CHECKOUT",
+      onSuccess: () => {
+         setPaymentDetails({
+            email: '',
+            amount: undefined,
+            metadata : {
+               name: '',
+               phone: ''
+            }
+         })
+      //   handleCheck(state.id)
       navigate('/checkout', { state: {...values}})
-   // votes: (values.voteOptions/50), price: values.voteOptions } });
-   // state={{...values, id:details?.id, votes:details?.votes}}
+   },
+      // onClose: () => alert("Wait! You need to vote for your girl, Please don't go!!!!"),
+    }
+
+   const onSubmit = (values, actions) => {
+      setPaymentDetails({
+         email: values?.email,
+         amount: details?.cheapestPrice,
+         metadata : {
+            name: `${values?.firstName} ${values?.lastName}`,
+            phone: values.mobile
+         }
+      })      
    }
 
    const {values,handleBlur, handleChange, handleSubmit, errors, touched} = useFormik({
@@ -39,6 +80,7 @@ function CheckoutForm({details}) {
       onSubmit
     })
 
+    
    return (
       <div className="">
          <h3 className="form-header">Billing Details</h3>
@@ -58,7 +100,7 @@ function CheckoutForm({details}) {
                            value={values.firstName || ''}
                            error = {errors.firstName || touched.firstName}
                         />
-                           {/* {errors.firstName && touched.firstName && <p className='error-text'>Please enter your first name</p>} */}
+                           {errors.firstName && touched.firstName && <p className='error-text'>Please enter your first name</p>}
                      </Grid>
                      <Grid item md={6} sm={12}>
                         <TextField
@@ -72,7 +114,7 @@ function CheckoutForm({details}) {
                            value={values.lastName || ''}
                            error = {errors.lastName || touched.lastName}
                         />
-                           {/* {errors.lastName && touched.lastName && <p className='error-text'>Please enter your last name</p>} */}
+                           {errors.lastName && touched.lastName && <p className='error-text'>Please enter your last name</p>}
                      </Grid>
                      <Grid item md={6} sm={12}>
                         <TextField
@@ -87,7 +129,7 @@ function CheckoutForm({details}) {
                            error = {errors.email || touched.email}
 
                         />
-                           {/* {errors.email && touched.email && <p className='error-text'>Please enter a valid email address</p>} */}
+                           {errors.email && touched.email && <p className='error-text'>Please enter a valid email address</p>}
                      </Grid>
                      <Grid item md={6} sm={12}>
                         <TextField
@@ -101,7 +143,7 @@ function CheckoutForm({details}) {
                            value={values.mobile || ''}
                            error = {errors.mobile || touched.mobile}
                         />
-                           {/* {errors.mobile && touched.mobile && <p className='error-text'>Please enter a valid mobile number</p>} */}
+                           {errors.mobile && touched.mobile && <p className='error-text'>Please enter a valid mobile number</p>}
                      </Grid>
                      <Grid item md={6} sm={12}>
                         <TextField
@@ -166,8 +208,8 @@ function CheckoutForm({details}) {
                <Grid item md={1}></Grid>
                <Grid item md={3} sm={12}>
                   <div className="checkout-card">
-                     <CheckoutCard data={details}/>
-                     <Button
+                     <CheckoutCard data={details} setCounter={setCounter}/>
+                     {/* <Button
                         className='mb-4 px-12 checkout-btn'
                         variant='contained'
                         color='primary'
@@ -175,7 +217,8 @@ function CheckoutForm({details}) {
                         fullWidth
                      >
                         PROCEED TO CHECKOUT
-                     </Button>
+                     </Button> */}
+                     <PaystackButton className="checkout-btn" {...componentProps} onClick={onSubmit}/>
                   </div>
                </Grid>
                {/* <Grid item md={2}></Grid> */}

@@ -66,14 +66,13 @@ const Header = ({ type, aboutPage }) => {
       >
         {type !== "list" && (
           <>
-            <h1 className="headerTitle">
-              {aboutPage ? "About Us": " A lifetime of discounts? It's Genius." }
-            </h1>
-            <p className="headerDesc">
-              Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Lamabooking account
-            </p>
-            {!user && <button className="headerBtn">Sign in / Register</button>}
+            <div className="header-caption">
+              <h1 className="headerTitle">
+                {aboutPage ? "About Us": " THE ARK OF PREMIUM COMFORT" }
+              </h1>
+              <p className="headerDesc">Enjoy your holidays at our luxurious home</p>
+            </div>
+            {/* {!user && <button className="headerBtn">Sign in / Register</button>} */}
             {!aboutPage && 
               <HeaderSearch
                 setDestination = {setDestination}

@@ -29,6 +29,22 @@
 }
 .checkout-btn{
    margin-top: 20px !important;
+   color: #fff;
+   background-color: #1976d2;
+   box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+   width: 100%;
+   -webkit-tap-highlight-color: transparent;
+   outline: none;
+   border: 0;
+   font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    min-width: 64px;
+    padding: 6px 16px;
+    border-radius: 4px;
 }
 .total-price{
    background: #f5f4fb;

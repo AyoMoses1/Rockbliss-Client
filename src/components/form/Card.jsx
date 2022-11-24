@@ -11,13 +11,9 @@ import { useContext, useState } from 'react';
 import { SearchContext } from '../../context/SearchContext';
 
 
-export default function CheckoutCard({data}) {
+export default function CheckoutCard({data, setCounter}) {
 
    const state = JSON.parse(localStorage.getItem("state"))
-   console.log(state, 'state *****************************************************')
-
-   console.log(data, "checkout data")
-
 
    const {dates} = useContext(SearchContext)
 
@@ -40,9 +36,12 @@ export default function CheckoutCard({data}) {
       return dates;
    };
 
-
-
    const alldates = getDatesInRange(state.dates[0]?.startDate, state.dates[0]?.endDate);
+
+   React.useEffect(()=> {
+      setCounter(alldates.length)
+   }, [])
+
 
    console.log(alldates)
 

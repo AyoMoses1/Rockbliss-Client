@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(1deg, rgba(0, 0, 0, 0.1), rgba(1, 1, 1, 0.6)), url('../../assets/home.webp');
+  background: linear-gradient(1deg, rgba(0, 0, 0, 0.1), rgba(1, 1, 1, 0.4)), url('../../assets/home.webp');
   position: relative;
   z-index: 1;
   height: 70vh;
@@ -9,17 +9,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../../assets/pictures/gallery3.jpg');
+  /* background-image: url('../../assets/pictures/gallery3.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 
 .headerContainer {
   width: 100%;
   max-width: 1024px;
   margin: 20px 0px 100px 0px;
   text-align: center;
+}
+
+.headerTitle{
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
 }
 
 .headerContainer.listMode {
@@ -84,6 +92,7 @@
   gap: 10px;
   border: 1px solid #dedede;
   padding: 10px 20px;
+  width: 100%;
 }
 .destination{
   display: none;
@@ -166,9 +175,20 @@
   .headerSearch{
     flex-direction: column;
     height: 40vh;
-    
-  
     justify-content: space-between;
+    position: relative;
+    top: 100px;
+  }
+  .header-caption{
+      margin-top: 200px;
+  }
+  .headerTitle{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 25px;
+    transform-origin: 50% 50%;
+    transform: translate(0px, 0px);
   }
   .headerSearchItem{
     width: 80%;
