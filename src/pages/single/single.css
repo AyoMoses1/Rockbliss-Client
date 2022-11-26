@@ -1,32 +1,108 @@
 .single-container{
-    padding:  100px 50px;
+    padding:  100px 100px;
 }
-.single-container .carousel{
-    height: 400px !important;
-    background: #fff;
-}
-
-.single-container .car-image{
-    height: 400px;
-}
-.single-container img{
-    height: 100%;
-    width: 100%;
-    /* object-fit: contain; */
-}
-
-.single-container .hotelWrapper{
+.single-carousel{
+    background: grey;
     padding: 100px 0;
-    display: flex !important;
 }
 
-.single-container .hotelWrapper h1{
-    font-weight: 700;
-    color: #606060; 
+.single-carousel img{
+    height: 300px;
+    border-radius: 10px;
 }
-.con{
-    background: red !important;
+
+.single-flex{
+    display: flex;
+    justify-content: space-between;
 }
-.single-container .hotelDetailsPrice{
-    width: 100%;
+.heading{
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700 !important;
+    color: #606060;
+}
+.single-info p{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #858a99;
+    /* line-height: 28px; */
+}
+.card-1{
+    border: 1px solid #ebebeb;
+    padding: 15px;
+    /* max-width: fit-content; */
+    text-align: center;
+    font-size: 15px;
+    color: #858a99;
+}
+.card-1 span{
+    font-size: 16px;
+}
+.card-2{
+    height: 400px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    color: #fff !important;
+}
+.zante{
+    color: #fff;
+    font-size: 22px !important;
+}
+.dream{
+    font-style: italic;
+}
+
+.single-services{
+    margin-top: 20px;
+}
+.single-service__container{
+    padding: 10px 0 ;
+ }
+ .single-service-card{
+    border: 1px dashed #dedede;
+    display: flex;
+    justify-content: start; 
+    align-items: center;
+    padding: 10px 20px;
+    flex-direction: row;
+ }
+ .single-service-name{
+    margin-top: 10px;
+    color: #a8a8a8;
+    font-size: 18px;
+    margin-left: 10px;
+ }
+ .single-service__container svg{
+    color: #a8a8a8;
+ }
+@media only screen and (max-width: 600px) {
+    .single-container{
+        padding: 50px 20px;
+    }
+    .single-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading{
+        font-size: 20px !important;
+        text-align: center;
+    }
+    span, p, .price{
+        font-size: 14px !important;
+    }
+    .single-carousel{
+        background: transparent;
+        padding: 0;
+    }
+    .single-carousel img{
+        height: 35vh;
+        /* object-fit: contain; */
+    }
 }

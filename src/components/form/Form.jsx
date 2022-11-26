@@ -8,6 +8,7 @@ import "./styles.css";
 import { useNavigate } from 'react-router-dom';
 import CheckoutCard from './Card';
 import { PaystackButton } from 'react-paystack';
+import axios  from 'axios';
 
 
 function CheckoutForm({details}) {
@@ -39,6 +40,25 @@ function CheckoutForm({details}) {
 
 
    const {email, amount, name, phone} = paymentDetails
+
+
+   const handlePayment = async (entries) => {
+      try {
+         const newCustomer = {
+            firstName : values?.firstName,
+            lastName : values?.lastName,
+            email: values?.email,
+            phone: values?.mobile,
+            address : values?.address,
+            city : values?.city,
+            country: values?.country,
+            zip: values?.zip,
+            request: values?.request
+         };
+
+         await axios.post("http://localhost:8000/api/customers/checkout", newCustomer);
+      } catch (err) {console.log(err)}
+   }
    const componentProps = {
       email,
       amount: amount * counter * 100,
@@ -49,6 +69,7 @@ function CheckoutForm({details}) {
       publicKey,
       text: "PROCEED TO CHECKOUT",
       onSuccess: () => {
+         handlePayment(paymentDetails)
          setPaymentDetails({
             email: '',
             amount: undefined,
