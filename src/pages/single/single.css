@@ -62,6 +62,9 @@
 .single-services{
     margin-top: 20px;
 }
+.MuiContainer-root{
+    padding-left: 0 !important;
+}
 .single-service__container{
     padding: 10px 0 ;
  }
