@@ -50,7 +50,7 @@ const List = () => {
   }
 
   const isAvailable = (hotel) => {
-    const isFound = hotel?.unavailableDates.some((date) =>
+    const isFound = hotel?.unavailableDates?.some((date) =>
       alldates.includes(new Date(date).getTime())
     );
         
