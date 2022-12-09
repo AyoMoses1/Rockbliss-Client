@@ -1,15 +1,13 @@
 .header {
-  background: linear-gradient(1deg, rgba(0, 0, 0, 0.1), rgba(1, 1, 1, 0.4)), url('../../assets/hero.webp');
+  background: linear-gradient(1deg, rgba(0, 0, 0, 0.7), rgba(191, 17, 17, 0.3)), url('../../assets/home.webp');
   position: relative;
   z-index: 1;
-  /* height: 70vh; */
   width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-image: url('../../assets/pictures/gallery3.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -174,7 +172,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .header{
-    padding: 0;
+    padding: 0 !important;
   }
   .headerSearch{
     flex-direction: column;
@@ -184,7 +182,7 @@
     top: 100px;
   }
   .header-caption{
-      margin-top: 200px;
+      margin-top: 100px;
   }
   .headerTitle{
     color: rgb(255, 255, 255);
@@ -195,7 +193,8 @@
     transform: translate(0px, 0px);
   }
   .headerDesc{
-    display: none;
+    font-size: 10px !important;
+    /* display: none; */
   }
   .headerSearchItem{
     width: 80%;

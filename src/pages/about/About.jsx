@@ -8,13 +8,15 @@ import Footer from './../../components/footer/Footer';
 import AboutRemark from './../../components/aboutRemark/AboutRemark';
 import AboutGallery from '../../components/aboutGallery/AboutGallery'
 import Service from '../../components/service/Service'
+import Hero from './../../components/hero/Hero';
 
 const About = () => {
 
   return (
     <>
         <Navbar/>
-        <Header aboutPage = {true}/>
+        <Hero title="About Us"/>
+        {/* <Header aboutPage = {true}/> */}
         <div className='main-about-container'>
           <Duration/>
           <AboutGallery/>

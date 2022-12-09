@@ -53,7 +53,7 @@ const Header = ({ type, aboutPage }) => {
     }
     else{
       setOpenDate(true)
-      alert("Please select a start and an end Date")
+      // alert("Please select a start and an end Date")
     }
   };
 
