@@ -53,36 +53,6 @@ const SecondRemark = () => {
                 </Grid>
             </Grid>
         </Grid>
-        <Grid container spacing={2} className='remark-services'>
-            <Grid item xs={6} sm={6} md={3} className='flex'>
-                <img src="http://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/uploads/sites/2/2022/04/icon-16.png"/>
-                <div>
-                    <h5>Smart Key</h5>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-            </Grid>
-            <Grid item xs={6} sm={6} md={3} className='flex'>
-                <img src="http://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/uploads/sites/2/2022/04/icon-15.png"/>
-                <div>
-                    <h5>Store Luggage</h5>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-            </Grid>
-            <Grid item xs={6} sm={6} md={3} className='flex'>
-                <img src="http://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/uploads/sites/2/2022/04/icon-17.png"/>
-                <div>
-                    <h5>Room Service</h5>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-            </Grid>
-            <Grid item xs={6} sm={6} md={3} className='flex'>
-                <img src="http://www.nicdarkthemes.com/themes/hotel-booking/wp/demo/hotel/wp-content/uploads/sites/2/2022/04/icon-18.png"/>
-                <div>
-                    <h5>Disinfection</h5>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-            </Grid>
-        </Grid>
     </Grid>
   )
 }

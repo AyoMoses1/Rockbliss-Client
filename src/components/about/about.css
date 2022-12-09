@@ -67,6 +67,7 @@
   @media only screen and (max-width: 600px) {
     .about-container{
       padding: 10px !important;
+      margin-top: 50px !important;
     }
     .about-container h2{
         text-align: center;

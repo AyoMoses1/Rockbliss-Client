@@ -1,8 +1,8 @@
 .header {
-  background: linear-gradient(1deg, rgba(0, 0, 0, 0.1), rgba(1, 1, 1, 0.4)), url('../../assets/home.webp');
+  background: linear-gradient(1deg, rgba(0, 0, 0, 0.1), rgba(1, 1, 1, 0.4)), url('../../assets/hero.webp');
   position: relative;
   z-index: 1;
-  height: 70vh;
+  /* height: 70vh; */
   width: 100%;
   color: white;
   display: flex;
@@ -13,6 +13,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  padding: 100px 0;
 }
 
 
@@ -57,8 +58,8 @@
 }
 
 .headerBtn {
-  background-color: black;
-  color: goldenrod;
+  background-color: red;
+  color: white;
   font-weight: 500;
   border: none;
   padding: 10px 20px;
@@ -172,6 +173,9 @@
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .header{
+    padding: 0;
+  }
   .headerSearch{
     flex-direction: column;
     height: 40vh;
@@ -186,9 +190,12 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 20px;
     transform-origin: 50% 50%;
     transform: translate(0px, 0px);
+  }
+  .headerDesc{
+    display: none;
   }
   .headerSearchItem{
     width: 80%;

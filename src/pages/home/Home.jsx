@@ -37,7 +37,7 @@ const Home = () => {
         </div>
         <SecondRemark/>
       </div>
-      <Services/>   
+      <Services/> 
       <Footer/>
     </div>
   );

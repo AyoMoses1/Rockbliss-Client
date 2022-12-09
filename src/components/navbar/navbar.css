@@ -1,30 +1,4 @@
-/* .navbar{
-  height: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.navContainer{
-  width: 100%;
-  max-width: 1024px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo{
-  font-weight: 500;
-}
-
-.navButton{
-  margin-left: 20px;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  color: #003580;
-} */
-
+ 
 .nav{
   background: #1c1c1d !important;
 }
@@ -56,23 +30,27 @@
   transform-origin: bottom left;
 }
 
-/* .nav a:hover{
-  color: black !important;
-} */
 .nav-links{
-  /* background: red; */
   width: 60%;
   display: flex;
   justify-content: space-around;
 }
-.logo{
-  object-fit: contain;
-  height: 50px;
-  width: 100px;
-}
+
 .menu-icon{
   color: #fff;
+}
+.menu-icon:hover{
+  color: red !important;
 }
 .drawer-link{
   color: #000;
 }
+.MuiToolbar-root{
+  justify-content: space-between;
+}
+ .logo{
+  height: 50px;
+  width: 100px;
+  object-fit: contain;
+}
+

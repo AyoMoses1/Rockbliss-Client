@@ -5,7 +5,8 @@ import {
   List,
   ListItem,
   ListItemText,
- makeStyles
+ makeStyles,
+ useMediaQuery
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -22,35 +23,16 @@ const useStyles = makeStyles(()=>({
     }
 }));
 
+
+
 function DrawerComponent() {
 const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
 
+  const handleOpenDrawer = () => {
+    setOpenDrawer(!openDrawer)
+  }
 
-  // <Link to="/" className={""}>
-  // Home
-  // </Link>
-  // <Link to="/about" className={""}>
-  //   About Us
-  // </Link>
-  // <Link to="/" className={""}>
-  //   Our Apartments
-  // </Link>
-  // <Link to="/" className={""}>
-  //   Extra Services
-  // </Link>
-  // <Link to="/" className={""}>
-  //   Booking Terms
-  // </Link>
-  // <Link to="/" className={""}>
-  //   Lease Plan
-  // </Link>
-  // <Link to="/" className={""}>
-  //   Make A Review
-  // </Link>
-  // <Link to="/contact" className={""}>
-  //   Contact
-  // </Link>
   return (
     <>
       <Drawer
@@ -78,21 +60,6 @@ const classes = useStyles();
               <Link to="/services" className="drawer-link">Extra Services</Link>
             </ListItemText>
           </ListItem>
-          {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/terms">Booking Terms</Link>
-            </ListItemText>
-          </ListItem> */}
-          {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/lease">Lease Plan</Link>
-            </ListItemText>
-          </ListItem> */}
-          {/* <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/review">Make A Review</Link>
-            </ListItemText>
-          </ListItem> */}
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/contact" className="drawer-link">Contact</Link>
@@ -100,8 +67,8 @@ const classes = useStyles();
           </ListItem>
         </List>
       </Drawer>
-      <IconButton onClick={() => setOpenDrawer(!openDrawer)}>
-        <MenuIcon  className="menu-icon"/>
+      <IconButton >
+        <MenuIcon  className="menu-icon" onClick={handleOpenDrawer}/>
       </IconButton>
     </>
   );

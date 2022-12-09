@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 import './navbar.css'
-import logo from "../../assets/logo.jpg"
+import logo from "../../assets/logout.jpg"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -43,10 +43,10 @@ function Navbar() {
   return (
     <AppBar position="static" className="nav">
       {/* <CssBaseline /> */}
-      <Toolbar>
-        <Typography variant="h4" className={classes.logo}>
+      <Toolbar className="toolbar">
+        <div>
           <img src={logo} className="logo"/>
-        </Typography>
+        </div>
         {isMobile ? (
           <DrawerComponent />
         ) : (
@@ -63,15 +63,6 @@ function Navbar() {
             <Link to="/services" className={""}>
               Extra Services
             </Link>
-            {/* <Link to="/terms" className={""}>
-              Booking Terms
-            </Link> */}
-            {/* <Link to="/lease" className={""}>
-              Lease Plan
-            </Link> */}
-            {/* <Link to="/review" className={""}>
-              Make A Review
-            </Link> */}
             <Link to="/contact" className={""}>
               Contact
             </Link>
