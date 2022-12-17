@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(1deg, rgba(0, 0, 0, 0.7), rgba(191, 17, 17, 0.3)), url('../../assets/home.webp');
+  background: linear-gradient(1deg, rgba(0, 0, 0, 0.7), rgba(191, 17, 17, 0.3)), url('../../assets/highlights/sadelsrockblis46.jpg');
   position: relative;
   z-index: 1;
   width: 100%;
@@ -10,7 +10,7 @@
   justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 45%;
   padding: 100px 0;
 }
 
@@ -173,6 +173,8 @@
 @media only screen and (max-width: 600px) {
   .header{
     padding: 0 !important;
+    background: linear-gradient(1deg, rgba(0, 0, 0, 0.7), rgba(191, 17, 17, 0.3)), url('../../assets/highlights/mobsadelsrockblis46.jpg') no-repeat;
+    background-size: contain;
   }
   .headerSearch{
     flex-direction: column;

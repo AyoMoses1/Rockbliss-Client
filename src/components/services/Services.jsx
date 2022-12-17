@@ -1,14 +1,10 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
 import './services.css'
-import about1 from '../../assets/pexels-pixabay-271618.webp'
-import about2 from '../../assets/pexels-pixabay-271639.webp'
-import about3 from '../../assets/pexels-pixabay-262978.webp'
-import about4 from '../../assets/pexels-thorsten-technoman-338504.webp'
-import taxi from '../../assets/pexels-cottonbro-4606336.webp'
-import menu from '../../assets/pexels-pixabay-262978.webp'
-import laundary from '../../assets/pexels-pixabay-325876.webp'
-import spa from '../../assets/pexels-thorsten-technoman-338504.webp'
+import room from '../../assets/highlights/sadelsrockblis14.jpg'
+import menu from '../../assets/highlights/sadelsrockblis4.jpg'
+import laundary from '../../assets/highlights/sadelsrockblis50.jpg'
+import spa from '../../assets/highlights/sadelsrockblis18.jpg'
 import {Carousel} from 'react-carousel-minimal'
 
 
@@ -16,8 +12,8 @@ const Services = () => {
 
     const data = [
         {
-          image: taxi,
-          caption: "Delivering Transport with excellence"
+          image: room,
+          caption: "We provide an excellent room service"
         },
         {
           image: laundary,
@@ -29,7 +25,7 @@ const Services = () => {
         },
         {
           image: menu,
-          caption: "Our partners deliver the best menu"
+          caption: "We provide a stable power supply"
         },
       ];
     

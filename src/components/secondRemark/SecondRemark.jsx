@@ -4,8 +4,8 @@ import "./secondRemark.css"
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import remark from "../../assets/pictures/remark.jpg"
-import rem from "../../assets/pictures/rem.jpg"
+import remark from "../../assets/highlights/sadelsrockblis33.jpg"
+import rem from "../../assets/highlights/sadelsrockblis29.jpg"
 import manager from "../../assets/pictures/ayo.png"
 
 const SecondRemark = () => {

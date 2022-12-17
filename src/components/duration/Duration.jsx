@@ -24,7 +24,7 @@ const Duration = () => {
                     <Grid container spacing={2}>
                         <Grid item md ={6} xs ={12} className="duration-card">
                             <div className='icon-container'><CabinIcon className='duration-icon'/></div>
-                            <h3>LONG STAY</h3>
+                            <h3 className='white_header'>LONG STAY</h3>
                             <p>There is also facilities to take care of your long stay for longer period which could run into months or even years</p>
                         </Grid>
                         <Grid item md ={6} xs ={12} className="duration-card">
@@ -39,7 +39,7 @@ const Duration = () => {
                         </Grid>
                         <Grid item md ={6} xs ={12} className="duration-card">
                             <div className='icon-container'><BedroomParentIcon className='duration-icon'/></div>
-                            <h3>ENTERTAINMENT</h3>
+                            <h3 className='white_header'>ENTERTAINMENT</h3>
                             <p>Our entertainment in rooms is second to non. All rooms have Flat screens TV and premium bouquet DSTV decoder</p>
                         </Grid>
                     </Grid>

@@ -20,7 +20,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #1ea1a1;
+  background-color: red;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

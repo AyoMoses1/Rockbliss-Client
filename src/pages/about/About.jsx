@@ -16,7 +16,6 @@ const About = () => {
     <>
         <Navbar/>
         <Hero title="About Us"/>
-        {/* <Header aboutPage = {true}/> */}
         <div className='main-about-container'>
           <Duration/>
           <AboutGallery/>

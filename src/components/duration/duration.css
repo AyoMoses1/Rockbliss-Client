@@ -17,18 +17,18 @@
 }
 .duration-icon{
     font-size: 36px;
-    color: orange;  
+    color: red;  
 }
 .duration-card:nth-child(1), .duration-card:nth-child(4){
-    background: orange;
+    background: red;
     color: white;
 }
 .duration-card:nth-child(2) .icon-container, .duration-card:nth-child(3) .icon-container{
-    background: orange;
+    background: red;
     color: white !important;
 }
 .duration-card:nth-child(2) .duration-icon, .duration-card:nth-child(3) .duration-icon{
-    background: orange;
+    background: red;
     color: white !important;
 }
 .duration-card:nth-child(2), .duration-card:nth-child(3){
@@ -62,6 +62,10 @@
 
 .flex-1, .flex-2{
     width: 48%;
+}
+
+.white_header{
+    color: #fff;
 }
 
 

@@ -4,7 +4,7 @@ import "./aboutRemark.css"
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import remark from "../../assets/pictures/indoor.jpg"
+import remark from "../../assets/highlights/sadelsrockblis31.jpg"
 import manager from "../../assets/pictures/ayo.png"
 
 const AboutRemark = () => {
@@ -50,8 +50,8 @@ const AboutRemark = () => {
                     <div className='flex'>
                         <img src={manager} className="manager"/>
                         <Grid container>
-                            <Grid item md={12} xs={12} className="name">Andrew Stuart</Grid>
-                            <Grid item md={12} xs={12} className="role">Hotel Manager</Grid>
+                            <Grid item md={12} xs={12} className="name">Mr. Tokunbo</Grid>
+                            <Grid item md={12} xs={12} className="role">CEO</Grid>
                         </Grid>
                     </div>
                     <div>

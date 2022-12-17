@@ -1,12 +1,11 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 import './about.css'
-import about1 from '../../assets/pexels-pixabay-271618.webp'
-import about2 from '../../assets/pexels-pixabay-271639.webp'
-import about3 from '../../assets/pexels-pixabay-262978.webp'
-import about4 from '../../assets/pexels-thorsten-technoman-338504.webp'
+import about1 from '../../assets/highlights/sadelsrockblis4.jpg'
+import about2 from '../../assets/highlights/sadelsrockblis9.jpg'
+import about3 from '../../assets/highlights/sadelsrockblis27.jpg'
+import about4 from '../../assets/highlights/sadelsrockblis43.jpg'
 
-// 
 const About = () => {
   return (
     <div className='about-container'>

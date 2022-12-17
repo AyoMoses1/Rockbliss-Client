@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 import './navbar.css'
-import logo from "../../assets/logout.jpg"
+import logo from "../../assets/logo.png"
 
 
 const useStyles = makeStyles((theme) => ({

@@ -1,10 +1,10 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
 import './aboutGallery.css'
-import gallery1 from "../../assets/pictures/gallery.jpg"
-import gallery2 from "../../assets/pictures/gallery2.jpg"
-import gallery3 from "../../assets/pictures/gallery3.jpg"
-import gallery4 from "../../assets/pictures/gallery4.jpg"
+import gallery1 from "../../assets/highlights/sadelsrockblis45.jpg"
+import gallery2 from "../../assets/highlights/sadelsrockblis43.jpg"
+import gallery3 from "../../assets/highlights/sadelsrockblis27.jpg"
+import gallery4 from "../../assets/highlights/sadelsrockblis19.jpg"
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 

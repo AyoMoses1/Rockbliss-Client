@@ -9,6 +9,7 @@ import { red } from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useContext, useState } from 'react';
 import { SearchContext } from '../../context/SearchContext';
+import './checkoutCard.css'
 
 
 export default function CheckoutCard({data, setCounter}) {
@@ -47,7 +48,7 @@ export default function CheckoutCard({data, setCounter}) {
 
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} className='checkout-card'>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
