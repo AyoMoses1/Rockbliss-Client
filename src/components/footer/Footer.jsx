@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="foo_top_header_one section_padding_100_70">
             <div className="container">
                 <div className="row">
-                    <div className="col-12 col-md-6 col-lg-3">
+                    <div className="col-12 col-md-6 col-lg-4">
                         <div className="kilimanjaro_part">
                             <h5>About Us</h5>
                             <p>It includes rich features & contents. It's designed & developed based on One Page/ Multi-page Layout,blog themes,world press themes and blogspot. You can use any layout from any demo anywhere.</p>
@@ -24,7 +24,7 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-3">
+                    <div className="col-12 col-md-6 col-lg-4">
                         <div className="kilimanjaro_part">
                             <h5>Tags Widget</h5>
                             <ul className=" kilimanjaro_widget">
@@ -51,57 +51,16 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-3">
-                        <div className="kilimanjaro_part">
-                            <h5>Latest News</h5>
-                            <div className="kilimanjaro_blog_area">
-                                <div className="kilimanjaro_thumb">
-								<img className="img-fluid" src="https://3.bp.blogspot.com/--C1wpaf_S4M/W7V__10nRoI/AAAAAAAAK24/1NSfapuYSIY0f0wzXY9NgoH0FjQLT07YACKgBGAs/s1600/maxresdefault.jpg" alt="" />
-
-                                </div>
-                                <a href="#">Your Blog Title Goes Here</a>
-                                <p className="kilimanjaro_date">21 Jan 2018</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            </div>
-                            <div className="kilimanjaro_blog_area">
-                                <div className="kilimanjaro_thumb">
-								<img className="img-fluid" src="https://3.bp.blogspot.com/--C1wpaf_S4M/W7V__10nRoI/AAAAAAAAK24/1NSfapuYSIY0f0wzXY9NgoH0FjQLT07YACKgBGAs/s1600/maxresdefault.jpg" alt="" />
-                                </div>
-                                <a href="#">Your Blog Title Goes Here</a>
-                                <p className="kilimanjaro_date">21 Jan 2018</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            </div>
-                            <div className="kilimanjaro_blog_area">
-                                <div className="kilimanjaro_thumb">
-								<img className="img-fluid" src="https://3.bp.blogspot.com/--C1wpaf_S4M/W7V__10nRoI/AAAAAAAAK24/1NSfapuYSIY0f0wzXY9NgoH0FjQLT07YACKgBGAs/s1600/maxresdefault.jpg" alt="" />
-                                </div>
-                                <a href="#">Your Blog Title Goes Here</a>
-                                <p className="kilimanjaro_date">21 Jan 2018</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-3">
+                    <div className="col-12 col-md-6 col-lg-4">
                         <div className="kilimanjaro_part">
                             <h5>Quick Contact</h5>
                             <div className="kilimanjaro_single_contact_info">
                                 <h5>Phone:</h5>
-                                <p>+255 255 54 53 52 <br/> +255 255 53 52 51</p>
+                                <p>+234 803 461 4213 <br/> +234 803 461 4213</p>
                             </div>
                             <div className="kilimanjaro_single_contact_info">
                                 <h5>Email:</h5>
                                 <p>support@email.com <br/> company@email.com</p>
-                            </div>
-                        </div>
-                        <div className="kilimanjaro_part">
-                            <h5>Latest Works</h5>
-                            <div className="kilimanjaro_works">
-                                <a className="kilimanjaro_works_img" href="img/gallery/1.jpg"><img src="img/gallery/1.jpg" alt="" /></a>
-                                <a className="kilimanjaro_works_img" href="img/gallery/4.jpg"><img src="img/gallery/4.jpg" alt="" /></a>
-                                <a className="kilimanjaro_works_img" href="img/gallery/5.jpg"><img src="img/gallery/5.jpg" alt="" /></a>
-                                <a className="kilimanjaro_works_img" href="img/gallery/7.jpg"><img src="img/gallery/7.jpg" alt="" /></a>
-                                <a className="kilimanjaro_works_img" href="img/gallery/10.jpg"><img src="img/gallery/10.jpg" alt="" /></a>
-                                <a className="kilimanjaro_works_img" href="img/gallery/11.jpg"><img src="img/gallery/11.jpg" alt="" /></a>
                             </div>
                         </div>
                     </div>
@@ -113,7 +72,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <p>© All Rights Reserved by <a href="#">My Footer<i className="fa fa-love"></i></a></p>
+                        <p>© All Rights Reserved by <a href="#">Rockbliss Serviced Apartments<i className="fa fa-love"></i></a></p>
                     </div>
                 </div>
             </div>

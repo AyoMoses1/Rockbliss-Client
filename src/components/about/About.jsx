@@ -18,7 +18,7 @@ const About = () => {
                     <br/>
                     Our goal is to make you feel like you never left home. It provides you with all the usual comforts you are used to at home and more. Also, we strive to provide all your needs,comfort and more, allowing you to focus on your core business or leisure activities at less than half the cost of the average room.
                     </p>
-                    <button>Book a Reservation</button>
+                    {/* <button>Book a Reservation</button> */}
                 </div>
             </Grid>
             <Grid item md={6} xs={12}>

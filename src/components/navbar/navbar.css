@@ -48,6 +48,11 @@
 .MuiToolbar-root{
   justify-content: space-between;
 }
+
+.MuiDrawer-paperAnchorLeft{
+  width: 200px;
+}
+
  .logo{
   height: 50px;
   width: 100px;
