@@ -20,7 +20,7 @@ function Apartment({item}) {
                 <Grid container spacing={2}>
                     <Grid item md ={8}>
                         <h4>{item.name}</h4>
-                        <p>{item.desc.slice(0, 99)}</p>
+                        <p>{item.desc.slice(0, 99) + '...'}</p>
                         <Grid container spacing={2}>
                             <Grid item sm={2} xs={2} md={2} className="icon-cont">
                                 <WifiIcon/>

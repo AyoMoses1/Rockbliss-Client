@@ -26,7 +26,6 @@ const List = () => {
 
   const {data, loading, error, reFetch} = useFetch(`${api}/api/hotels?city=${destination}&min=${min || 1}&max=${max || 100000}`) 
 
-  console.log(data, "This is the data ***************************************")
 
   const getDatesInRange = (startDate, endDate) => {
     const start = new Date(startDate);

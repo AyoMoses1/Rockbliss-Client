@@ -16,7 +16,7 @@ const AboutGallery = () => {
                 <div>
                     <div className='title'>CITY VIEW</div>
                     <div className='caption'>Small Suite</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, minima.</p>
+                    <p>We also have a special suite to accomodate your needs</p>
                     <div className='socials'>
                         <Grid container spacing={1}>
                             <Grid item xs={3} md={2}><TwitterIcon/></Grid>
@@ -43,7 +43,7 @@ const AboutGallery = () => {
                 <div>
                     <div className='title'>SEA VIEW</div>
                     <div className='caption'>Family Suite</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, minima.</p>
+                    <p>Our 4 Bedroom Family suite</p>
                     <div className='socials'>
                         <Grid container spacing={1}>
                             <Grid item xs={3} md={2}><TwitterIcon/></Grid>

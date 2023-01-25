@@ -75,26 +75,26 @@ const Services = () => {
                 <Grid container spacing={2} className="services-list">
                     <Grid item md={12} sm={12} xs={12} lg={12} className='services'>
                         <div>
-                            <h3>Restaurant</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                            <h3>State of the Art Amenities</h3>
+                            <p>Other amenities to get you started in your temporary home, usually including e.g. Hairdryer, Vacuum cleaner, Cleaning tools and detergent, Iron and ironing board, Laundry rack, Toilet paper, Hand soap, Shampoo and Conditioner</p>
                         </div>
                     </Grid>
                     <Grid item md={12} sm={12} xs={12} lg={12} className='services'>
                         <div>
-                            <h3>Shuttle Service</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                            <h3>Well Equipped Space</h3>
+                            <p>Our serviced apartment typically has more square meters than a traditional hotel room. We have room for your needs!</p>
                         </div>
                     </Grid>
                     <Grid item md={12} sm={12} xs={12} lg={12} className='services'>
                         <div>
                             <h3>Laundary</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                            <p>Depending on your selected service level, we can take care of the cleaning for you. From daily to one-time cleaning, you decide.</p>
                         </div>
                     </Grid>
                     <Grid item md={12} sm={12} xs={12} lg={12} className='services'>
                         <div>
-                            <h3>Spa- Beauty and Health</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                            <h3>24-hour Helpline</h3>
+                            <p>Access to 24-hour helpline: Did you break a chair? The AirCon too warm? Forenom’s own maintenance team is ready to jump in a car to help you!</p>
                         </div>
                     </Grid>
                 </Grid>

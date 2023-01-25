@@ -10,8 +10,7 @@ const Footer = () => {
                     <div className="col-12 col-md-6 col-lg-4">
                         <div className="kilimanjaro_part">
                             <h5>About Us</h5>
-                            <p>It includes rich features & contents. It's designed & developed based on One Page/ Multi-page Layout,blog themes,world press themes and blogspot. You can use any layout from any demo anywhere.</p>
-                            <p>Our company is completely creative, clean & 100% responsive website. Put your business into next level with us.</p>
+                            <p>Our goal is to make you feel like you never left home. It provides you with all the usual comforts you are used to at home and more. Also, we strive to provide all your needs,comfort and more, allowing you to focus on your core business or leisure activities at less than half the cost of the average room.</p>
                         </div>
                         <div className="kilimanjaro_part m-top-15">
                             <h5>Social Links</h5>
@@ -25,7 +24,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-4">
-                        <div className="kilimanjaro_part">
+                        {/* <div className="kilimanjaro_part">
                             <h5>Tags Widget</h5>
                             <ul className=" kilimanjaro_widget">
                                 <li><a href="#">ClassNamey</a></li>
@@ -37,7 +36,7 @@ const Footer = () => {
                                 <li><a href="#">ClassNameic</a></li>
                                 <li><a href="#">Medical</a></li>
                             </ul>
-                        </div>
+                        </div> */}
 
                         <div className="kilimanjaro_part m-top-15">
                             <h5>Important Links</h5>
@@ -60,7 +59,7 @@ const Footer = () => {
                             </div>
                             <div className="kilimanjaro_single_contact_info">
                                 <h5>Email:</h5>
-                                <p>support@email.com <br/> company@email.com</p>
+                                <p>rockblissapartments@gmail.com</p>
                             </div>
                         </div>
                     </div>

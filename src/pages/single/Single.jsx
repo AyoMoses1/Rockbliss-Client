@@ -41,7 +41,6 @@ const Single = () => {
       <SwiperSlide key={`slide-${i}`} tag="li" style={{ listStyle: 'none' }}>
         <img
           style={{ width: '100%' }}
-          // src={`https://picsum.photos/id/${i + 1}/500/300`}
           src={data?.photos[i]}
           alt={`Slide ${i}`}
         />
@@ -83,11 +82,11 @@ const Single = () => {
             <Grid item md ={8}>
               <div className="single-flex">
                 <h2 className="name heading">{data?.name}</h2>
-                <h2 className="price"><span className="heading">${data?.cheapestPrice}</span>/per night</h2>
+                <h2 className="price"><span className="heading">₦{data?.cheapestPrice}</span>/per night</h2>
               </div>
               <div className="single-info">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit… Zril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur.
+                   {data?.desc}
                   </p>
                   <h3 className="name heading">Apartment Availability</h3>
                   <CalendarCheck data={data}/>

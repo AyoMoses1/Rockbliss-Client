@@ -27,6 +27,11 @@
     background: black;
     color: #fff;
 }
+
+.service-container .services:first-child h3{
+    color: #fff;
+}
+
 .service-container .services h3{
     font-size: 20px;
     font-weight: 700;
